@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --ext .jsx,.ts,.tsx --config .eslintrc.json --fix",
-    "pretty": "prettier --write ."
+    "pretty": "prettier --write .",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "engines": {
     "node": ">=14.x.x"
@@ -19,9 +21,15 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
     "@types/express": "^4.17.12",
     "@types/react": "17.0.11",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "babel-loader": "^8.2.2",
     "eslint": "^7.28.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-node": "^4.1.0",
