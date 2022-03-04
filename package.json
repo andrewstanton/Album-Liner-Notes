@@ -12,7 +12,7 @@
     "build-storybook": "build-storybook"
   },
   "engines": {
-    "node": ">=14.x.x"
+    "node": "14.19.0"
   },
   "dependencies": {
     "@fontsource/roboto": "^4.4.5",
