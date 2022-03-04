@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
-const Button = styled.button``;
+export interface ButtonProps {}
+
+const Button = styled.button<ButtonProps>``;
 
 export default Button;

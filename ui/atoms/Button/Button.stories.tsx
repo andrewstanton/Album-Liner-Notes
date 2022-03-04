@@ -1,6 +1,6 @@
 import { Meta, Story } from "@storybook/react";
 
-import Button from "./Button";
+import Button, { ButtonProps } from "./Button";
 
 export default {
   title: "ui/atoms/Button",
@@ -8,7 +8,7 @@ export default {
   argTypes: {},
 } as Meta;
 
-const Template: Story = (args, { globals }) => (
+const Template: Story<ButtonProps> = (args, { globals }) => (
   <Button {...args} {...globals} />
 );
 

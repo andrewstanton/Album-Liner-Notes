@@ -2,16 +2,14 @@
   "env": {
     "browser": true,
     "es6": true,
-    "node": true,
-    "jest/globals": true
+    "node": true
   },
   "extends": [
+    "next",
+    "next/core-web-vitals",
     "airbnb",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "prettier/@typescript-eslint",
-    "prettier/react",
-    "plugin:prettier/recommended"
+    "prettier"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -27,51 +25,41 @@
     "sourceType": "module",
     "createDefaultProgram": true
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "jest",
-    "prettier",
-    "simple-import-sort"
-  ],
+  "plugins": ["react", "@typescript-eslint", "prettier", "simple-import-sort"],
   "rules": {
-    // don't force return type
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/explicit-member-accessibility": [
+    "semi": 0,
+    "quotes": 0,
+    "comma-dangle": 0,
+    "arrow-body-style": "warn",
+    "no-unused-vars": "off",
+    "react/function-component-definition": "off",
+    "@typescript-eslint/no-empty-interface": "warn",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "react/prop-types": "off",
+    "no-plusplus": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "jsx-a11y/anchor-is-valid": [
       "error",
       {
-        "accessibility": "no-public"
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref", "preferButton"]
       }
     ],
-    // don't force public or private methods in TS
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-var-requires": "off",
-    "@typescript-eslint/no-shadow": "off",
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars-experimental": "error",
-    "@typescript-eslint/explicit-module-boundary-types": [
-      "error",
+    "react/jsx-one-expression-per-line": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [
+      1,
       {
-        "allowedNames": ["render", "getInitialProps", "route"]
+        "extensions": [".jsx", ".tsx"]
       }
-    ], // we need this to be "on"
-    "array-callback-return": "off",
-    "no-underscore-dangle": "off",
+    ],
     "import/first": "error",
     "import/newline-after-import": "error",
     "import/no-duplicates": "error",
-    "import/prefer-default-export": "off",
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": [
-          "**/*.spec.tsx",
-          "**/*.spec.jsx",
-          "**/*.spec.ts",
-          "utils/test-utils.tsx"
-        ]
-      }
-    ],
+    "linebreak-style": 0,
+    "implicit-arrow-linebreak": 0,
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -82,56 +70,7 @@
         "tsx": "never"
       }
     ],
-    "jest/no-disabled-tests": "warn",
-    "jest/no-focused-tests": "error",
-    "jest/no-identical-title": "error",
-    "jest/prefer-to-have-length": "warn",
-    "jest/valid-expect": "error",
-    "jsx-a11y/anchor-is-valid": "off",
-    "react/jsx-props-no-spreading": "off",
-    "react/require-default-props": "off",
-    "react/no-unescaped-entities": "off",
-    //don't need href on a tag with Next router
-    "no-use-before-define": [
-      "error",
-      {
-        "functions": false,
-        "classes": false,
-        "variables": false
-      }
-    ],
-    "no-console": "off",
-    "no-plusplus": "off",
-    "no-shadow": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": false
-      }
-    ],
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".jsx", ".tsx"]
-      }
-    ],
-    //allow tsx extension
-    "react/no-danger": "off",
-    "react/sort-comp": [
-      1,
-      {
-        "order": [
-          "static-methods",
-          "lifecycle",
-          "/^on.+$/",
-          "everything-else",
-          "render"
-        ]
-      }
-    ],
-    "react/react-in-jsx-scope": "off",
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "import/prefer-default-export": "off"
   },
   "settings": {
     "import/resolver": {
