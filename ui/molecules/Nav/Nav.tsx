@@ -5,14 +5,14 @@ import { UrlObject } from "url";
 
 import NextLink from "../../atoms/NextLink/NextLink";
 
-export interface ILink {
+export interface INavLink {
   url: string | UrlObject;
   text: string;
   active?: boolean;
 }
 
 export interface NavProps {
-  links: ILink[];
+  links: INavLink[];
 }
 
 const NavContainer = styled.nav``;

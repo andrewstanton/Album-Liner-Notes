@@ -1,7 +1,8 @@
 import { Meta, Story } from "@storybook/react";
-import { ILink } from "../Nav/Nav";
 
 import Header, { HeaderProps } from "./Header";
+
+import { headerNav } from "../../../siteMeta";
 
 export default {
   title: "ui/molecules/Header",
@@ -12,20 +13,8 @@ const Template: Story<HeaderProps> = (args, { globals }) => (
   <Header {...args} {...globals} />
 );
 
-const links: ILink[] = [
-  {
-    text: "Home",
-    url: "/",
-  },
-  {
-    text: "Artist",
-    url: "/artists",
-    active: true,
-  },
-];
-
 export const Default = Template.bind({});
 Default.args = {
   ...Header.defaultProps,
-  links,
+  links: headerNav,
 };

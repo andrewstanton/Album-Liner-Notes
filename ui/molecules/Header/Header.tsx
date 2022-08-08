@@ -4,7 +4,7 @@ import tw from "twin.macro";
 import colors from "../../../config/colors";
 
 import { Wrapper, Logo, NextLink } from "../../atoms";
-import Nav, { ILink } from "../Nav/Nav";
+import Nav, { INavLink } from "../Nav/Nav";
 
 const HeaderContainer = styled.header<{ color?: string }>`
   ${tw`bg-black text-white w-full border-0 border-solid border-t-2`}
@@ -14,7 +14,9 @@ const HeaderContainer = styled.header<{ color?: string }>`
 
 export interface HeaderProps {
   color?: string;
-  links: ILink[];
+  links: INavLink[];
+  isOpen?: boolean;
+  onHamburgerClick?: () => void;
 }
 
 const HeaderTop = styled.div`
