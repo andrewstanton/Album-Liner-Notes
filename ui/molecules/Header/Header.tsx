@@ -3,7 +3,7 @@ import tw from "twin.macro";
 
 import colors from "../../../config/colors";
 
-import { Wrapper, Logo, NextLink } from "../../atoms";
+import { Wrapper, Logo, NextLink, Hamburger } from "../../atoms";
 import Nav, { INavLink } from "../Nav/Nav";
 
 const HeaderContainer = styled.header<{ color?: string }>`
@@ -20,14 +20,20 @@ export interface HeaderProps {
 }
 
 const HeaderTop = styled.div`
-  ${tw`p-4`}
+  ${tw`p-4 border-solid border-0 border-b border-white `}
+
+  .hamburger {
+    ${tw`inline-block md:hidden`}
+  }
 `;
 
 const HeaderBottom = styled.div`
-  ${tw`border-solid border-0 border-t border-white`}
+  ${tw`md:block hidden`}
 `;
 
 const LogoContainer = styled.div<{ color?: string }>`
+  ${tw`inline-block ml-4`}
+
   .logo {
     ${tw`transition-all duration-300`}
 
@@ -49,12 +55,13 @@ const LogoContainer = styled.div<{ color?: string }>`
  * @const {React.FC} Header
  */
 const Header: React.FC<HeaderProps> = (props) => {
-  const { color, links } = props;
+  const { color, links, isOpen, onHamburgerClick } = props;
 
   return (
     <HeaderContainer color={color}>
       <HeaderTop>
         <Wrapper>
+          <Hamburger on={isOpen} onClick={onHamburgerClick} />
           <LogoContainer color={color}>
             <NextLink href="/" title="Album Liner Notes Home">
               <Logo />
