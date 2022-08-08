@@ -4,6 +4,9 @@ import * as NextImage from "next/image";
 import GlobalStyle from "../config/GlobalStyle";
 import theme from "../config/theme";
 
+// Used Just For Google Font Import
+import "../pages/_app.css";
+
 const OriginalNextImage = NextImage.default;
 
 Object.defineProperty(NextImage, "default", {

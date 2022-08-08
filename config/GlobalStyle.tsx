@@ -6,9 +6,9 @@ const GlobalStyle = createGlobalStyle`
     ${normalize()}
 
     body, html {
-        font-family: 'Roboto', sans-serif;
-        font-size: 16px;
-        ${tw`bg-purple-600`}
+        font-family: 'Oxygen', sans-serif;
+        font-size: 14px;
+        ${tw`bg-grey-800`}
     }
 `;
 

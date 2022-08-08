@@ -2,25 +2,30 @@ module.exports = {
   white: "#fff",
   black: "#000",
 
-  // Purple Colors
-  purple600: "#020245",
-  purple700: "#020345",
+  // Teal
+  teal500: "#17a2b8",
 
-  // Green Colors
-  lime: "#A1CF5F",
-  green700: "#004C3A",
+  // Blue
+  blue300: "#44abeb",
+  blue500: "#1c85c6",
+  blue700: "#16689c",
 
-  // Grey Colors
-  grey100: "#0000004D",
-  grey200: "#00000048",
-  grey500: "#707070",
-  grey700: "#0000009B",
+  // Red
+  red500: "#df3637",
 
-  // Tan Colors
-  tan100: "#F9F9F7",
-  tan200: "#F1F0EB",
-  tan300: "#cacaba",
+  // Orange
+  orange500: "#fd7e14",
 
-  // Blue Colors
-  blue200: "#E8F5FF",
+  // Green
+  green500: "#86c440",
+
+  // Purple
+  purple500: "#6610f2",
+
+  // Yellow
+  yellow500: "#f4a41c",
+
+  // Grey
+  grey500: "#6c757d",
+  grey800: "#343a40",
 };

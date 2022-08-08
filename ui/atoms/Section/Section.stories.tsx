@@ -1,19 +1,20 @@
 import { Meta, Story } from "@storybook/react";
 
-import Button from "./Button";
+import Section from "./Section";
 
 export default {
-  title: "ui/atoms/Button",
-  component: Button,
+  title: "ui/atoms/Section",
+  component: Section,
   argTypes: {},
 } as Meta;
 
 const Template: Story = (args, { globals }) => (
-  <Button {...args} {...globals} />
+  <Section {...args} {...globals} />
 );
 
 export const Default = Template.bind({});
 Default.args = {
-  ...Button.defaultProps,
-  children: "I'm A Button",
+  ...Section.defaultProps,
+  bgColor: "#F1F0EB",
+  children: "I am a section",
 };

@@ -9,29 +9,34 @@ module.exports = {
     extend: {
       colors: {
         fontFamily: {
-          sans: ["Roboto", "Arial", "sans-serif"],
+          sans: ["Oxygen", "Arial", "sans-serif"],
         },
         purple: {
-          600: colors.purple600,
-          700: colors.purple700,
+          500: colors.purple600,
         },
         green: {
-          200: colors.lime,
-          700: colors.green700,
+          500: colors.green500,
+        },
+        orange: {
+          500: colors.orange500,
+        },
+        red: {
+          500: colors.red500,
+        },
+        yellow: {
+          500: colors.yellow500,
         },
         grey: {
-          100: colors.grey100,
-          200: colors.grey200,
           500: colors.grey500,
-          700: colors.grey700,
+          800: colors.grey800,
         },
-        tan: {
-          100: colors.tan100,
-          200: colors.tan200,
-          300: colors.tan300,
+        teal: {
+          500: colors.teal500,
         },
         blue: {
-          200: colors.blue200,
+          300: colors.blue300,
+          500: colors.blue500,
+          700: colors.blue700,
         },
       },
     },
